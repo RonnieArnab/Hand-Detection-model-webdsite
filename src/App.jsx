@@ -67,17 +67,15 @@ function App() {
   }, []);
 
   return (
-    <div className="relative w-screen h-screen">
+    <div className="flex justify-center items-center h-screen">
       <Webcam
         ref={webcamRef}
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute mx-auto left-0 right-0 text-center z-10 w-80 md:w-96 lg:w-1/2 h-60 md:h-72 lg:h-96"
       />
-      <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full" />
-      {/* <div
-        ref={cursorRef}
-        className="absolute w-4 h-4 bg-red-500 rounded-full pointer-events-none"
-        style={{ transition: "left 0.1s, top 0.1s" }}
-      /> */}
+      <canvas
+        ref={canvasRef}
+        className="absolute mx-auto left-0 right-0 text-center z-10 w-80 md:w-96 lg:w-1/2 h-60 md:h-72 lg:h-96"
+      />
     </div>
   );
 }
